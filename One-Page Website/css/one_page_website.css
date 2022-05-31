@@ -1,0 +1,19 @@
+/* GENERIC STYLES */
+body {
+    font-family:  Garamond, serif, Haettenschweiler, 'Arial Narrow Bold', serif;
+    font-size: 16;
+}
+
+/* INPUTS */
+input {
+    width: 300px;
+    margin: 1em 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.terms {
+    position: relative;
+    display: inline;
+    float: right;
+}
