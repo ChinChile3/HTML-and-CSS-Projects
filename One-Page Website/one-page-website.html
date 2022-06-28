@@ -4,6 +4,7 @@
 		<title>Lothric</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="JS/one_page_website.js" defer></script>
 	</head>
 	
 	<body>
@@ -40,12 +41,12 @@
 		<div id="gallery">
 			<h2>Gallery</h2>
 			<p>Areas you will traverse</p>
-			<div>
+			<div class="row">
 				
 					<!-- PHOTO=CONTAINTER 1 -->
 					<div>
-						<div>
-							<img src="./images/thumbnails/thumbnail_1.png" alt="Cemetery of Ash" width="240" height="135">
+						<div class="column">
+							<img src="./images/thumbnails/thumbnail_1_small.png" alt="Cemetery of Ash" width="240" height="135" onclick="openModal();currentSlide(1)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Fight your way through many areas of the Kingdom of Lothric and become a Lord of Cinder!</p>
@@ -56,8 +57,8 @@
 					
 					<!-- PHOTO=CONTAINTER 2 -->
 					<div>
-						<div>
-							<img src="./images/thumbnails/thumbnail_2.png" alt="Firelink Shrine" width="240" height="135">
+						<div class="column">
+							<img src="./images/thumbnails/thumbnail_2_small.png" alt="Firelink Shrine" width="240" height="135" onclick="openModal();currentSlide(2)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Fight your way through many areas of the Kingdom of Lothric and become a Lord of Cinder!</p>
@@ -68,8 +69,8 @@
 					
 					<!-- PHOTO=CONTAINTER 3 -->
 					<div>
-						<div>
-							<img src="./images/thumbnails/thumbnail_3.png" alt="Undead Settlement" width="240" height="135">
+						<div class="column">
+							<img src="./images/thumbnails/thumbnail_3_small.png" alt="Undead Settlement" width="240" height="135" onclick="openModal();currentSlide(3)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Fight your way through many areas of the Kingdom of Lothric and become a Lord of Cinder!</p>
@@ -80,8 +81,8 @@
 					
 					<!-- PHOTO=CONTAINTER 4 -->
 					<div>
-						<div>
-							<img src="./images/thumbnails/thumbnail_4.png" alt="Farron Keep" width="240" height="135">
+						<div class="column">
+							<img src="./images/thumbnails/thumbnail_4_small.png" alt="Farron Keep" width="240" height="135" onclick="openModal();currentSlide(4)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Fight your way through many areas of the Kingdom of Lothric and become a Lord of Cinder!</p>
@@ -92,8 +93,8 @@
 					
 					<!-- PHOTO=CONTAINTER 5 -->
 					<div>
-						<div>
-							<img src="./images/thumbnails/thumbnail_5.png" alt="Irithyll of the Boreal Valley" width="240" height="135">
+						<div class="column">
+							<img src="./images/thumbnails/thumbnail_5_small.png" alt="Irithyll of the Boreal Valley" width="240" height="135" onclick="openModal();currentSlide(5)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Fight your way through many areas of the Kingdom of Lothric and become a Lord of Cinder!</p>
@@ -104,8 +105,8 @@
 					
 					<!-- PHOTO=CONTAINTER 6 -->
 					<div>
-						<div>
-							<img src="./images/thumbnails/thumbnail_6.png" alt="Anor Londo" width="240" height="135">
+						<div class="column">
+							<img src="./images/thumbnails/thumbnail_6_small.png" alt="Anor Londo" width="240" height="135" onclick="openModal();currentSlide(6)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Fight your way through many areas of the Kingdom of Lothric and become a Lord of Cinder!</p>
@@ -116,8 +117,8 @@
 					
 					<!-- PHOTO=CONTAINTER 7 -->
 					<div>
-						<div>
-							<img src="./images/thumbnails/thumbnail_7.png" alt="Lothric Castle" width="240" height="135">
+						<div class="column">
+							<img src="./images/thumbnails/thumbnail_7_small.png" alt="Lothric Castle" width="240" height="135" onclick="openModal();currentSlide(7)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Fight your way through many areas of the Kingdom of Lothric and become a Lord of Cinder!</p>
@@ -128,8 +129,8 @@
 					
 					<!-- PHOTO=CONTAINTER 8 -->
 					<div>
-						<div>
-							<img src="./images/thumbnails/thumbnail_8.png" alt="Archdragon Peak" width="240" height="135">
+						<div class="column">
+							<img src="./images/thumbnails/thumbnail_8_small.png" alt="Archdragon Peak" width="240" height="135" onclick="openModal();currentSlide(8)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Fight your way through many areas of the Kingdom of Lothric and become a Lord of Cinder!</p>
@@ -140,8 +141,8 @@
 					
 					<!-- PHOTO=CONTAINTER 9 -->
 					<div>
-						<div>
-							<img src="./images/thumbnails/thumbnail_9.png" alt="Kiln of the First Flame" width="240" height="135">
+						<div class="column">
+							<img src="./images/thumbnails/thumbnail_9_small.png" alt="Kiln of the First Flame" width="240" height="135" onclick="openModal();currentSlide(9)" class="hover-shadow">
 							<div>
 								<h3>Click to Enlarge</h3>
 								<p>Fight your way through many areas of the Kingdom of Lothric and become a Lord of Cinder!</p>
@@ -149,6 +150,98 @@
 						</div>
 					</div>
 					<!-- END PHOTO CONTAINER 9 -->
+
+					<!-- MODAL/LIGHTBOX -->
+					<div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+
+							<div class="mySlides">
+								<div class="numbertext">1 / 9</div>
+								<img src="./images/thumbnails/thumbnail_1.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">2 / 9</div>
+								<img src="./images/thumbnails/thumbnail_2.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">3 / 9</div>
+								<img src="./images/thumbnails/thumbnail_3.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">4 / 9</div>
+								<img src="./images/thumbnails/thumbnail_4.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">5 / 9</div>
+								<img src="./images/thumbnails/thumbnail_5.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">6 / 9</div>
+								<img src="./images/thumbnails/thumbnail_6.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">7 / 9</div>
+								<img src="./images/thumbnails/thumbnail_7.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">8 / 9</div>
+								<img src="./images/thumbnails/thumbnail_8.png" style="width:100%">
+							</div>
+
+							<div class="mySlides">
+								<div class="numbertext">9 / 9</div>
+								<img src="./images/thumbnails/thumbnail_9.png" style="width:100%">
+							</div>
+
+							<!-- NEXT/PREVIOUS CONTROLS -->
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+							<!-- CAPTION TEXT -->
+							<div class="caption-container">
+								<p id="caption"></p>
+							</div>
+
+							<!-- THUMBNAIL IMAGE CONTROLS -->
+							<div class="column">
+								<img class="img_opacity" src="./images/thumbnails/thumbnail_1_small.png" onclick="currentSlide(1)" alt="Cemetery of Ash">
+							</div>
+							<div class="column">
+								<img class="img_opacity" src="./images/thumbnails/thumbnail_2_small.png" onclick="currentSlide(2)" alt="Firelink Shrine">
+							</div>
+							<div class="column">
+								<img class="img_opacity" src="./images/thumbnails/thumbnail_3_small.png" onclick="currentSlide(3)" alt="Undead Settlement">
+							</div>
+							<div class="column">
+								<img class="img_opacity" src="./images/thumbnails/thumbnail_4_small.png" onclick="currentSlide(4)" alt="Farron Keep">
+							</div>
+							<div class="column">
+								<img class="img_opacity" src="./images/thumbnails/thumbnail_5_small.png" onclick="currentSlide(5)" alt="Irithyll of the Boreal Valley">
+							</div>
+							<div class="column">
+								<img class="img_opacity" src="./images/thumbnails/thumbnail_6_small.png" onclick="currentSlide(6)" alt="Anor Londo">
+							</div>
+							<div class="column">
+								<img class="img_opacity" src="./images/thumbnails/thumbnail_7_small.png" onclick="currentSlide(7)" alt="Lothric Castle">
+							</div>
+							<div class="column">
+								<img class="img_opacity" src="./images/thumbnails/thumbnail_8_small.png" onclick="currentSlide(8)" alt="Archdragon Peak">
+							</div>
+							<div class="column">
+								<img class="img_opacity" src="./images/thumbnails/thumbnail_9_small.png" onclick="currentSlide(9)" alt="Kiln of the First Flame">
+							</div>
+							<!-- END MODAL/LIGHTBOX -->
+
+						</div>
+					</div>
 					
 				</div>
 			</div>
